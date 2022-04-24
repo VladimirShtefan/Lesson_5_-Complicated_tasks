@@ -6,6 +6,8 @@ def search_bracket(user_string):
             list_open_bracket.append(number_symbol)
         elif user_string[number_symbol] == ')':
             list_close_bracket.append(number_symbol)
+    if not list_open_bracket or not list_close_bracket:
+        return 'Не верно'
     if len(list_open_bracket) == len(list_close_bracket):
         if list_open_bracket[0] < list_close_bracket[0]:
             if list_close_bracket[len(list_close_bracket)-1] > list_open_bracket[len(list_open_bracket)-1]:
